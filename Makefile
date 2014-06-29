@@ -20,7 +20,7 @@ $(BUILD_DIR)/static/%.png: art/%.svg
 	optipng -o5 $@
 
 $(BUILD_DIR)/static/main.css: src/main.less
-	lessc $< > $@
+	lessc -x $< > $@
 
 $(BUILD_DIR)/index.html: render.py src/data.json src/index.html
 	./render.py src/data.json src/index.html > $(BUILD_DIR)/index.html
