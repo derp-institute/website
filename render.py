@@ -6,6 +6,7 @@ import json
 from re import sub
 
 from mako.template import Template
+from mako.lookup import TemplateLookup
 
 
 def main():
@@ -14,7 +15,8 @@ def main():
    with open(data_path) as f:
       data = json.load(f)
 
-   template = Template(filename=template_path)
+   lookup = TemplateLookup(directories=['src'])
+   template = lookup.get_template(template_path)
    html = template.render(data=data)
    # minify html inter-tag whitespace
    html = sub(r"\s+", " ", html)

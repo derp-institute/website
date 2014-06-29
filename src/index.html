@@ -1,80 +1,60 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Digital Ecologies Research Partnership</title>
-    <meta name="description" content="The Digital Ecologies Research Partnership (DERP) is a joint initiative to promote academic inquiry into social dynamics of the web.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="static/favicon.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="static/main.css">
-    <link href="http://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet" type="text/css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-52368972-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <header>
-      <img class="logo" src="static/logo.png" alt="">
-      <div class="title-line">
-        <h1>Digital Ecologies Research Partnership</h1>
-        <aside>(est. 2014)</aside>
-      </div>
-    </header>
-    <section id="brief">
-      <h2>DERP is an alliance of organizations working together to<br>&#32;support academic exploration of communities online.</h2>
-    </section>
-    <section id="about">
-      <div class="inner">
-        <h3>about</h3>
-        <p>Launched in 2014, the Digital Ecologies Research Partnership (DERP), is a joint initiative by an alliance of community websites to promote academic inquiry into the vibrant social dynamics of the web.</p>
-        <p>DERP seeks to solve two problems in the academic research space:</p>
-        <p>First, it is difficult for academic researchers to easily obtain data for their work beyond the confines of the largest social media platforms. DERP is a single point of contact for researchers to get in touch with relevant team members across a range of different community sites. We envision that this will lower the friction to investigating these sites in more depth, and broaden the scope of research happening within the academic community.</p>
-        <p>Second, it remains difficult to conduct good cross-platform analyses in academic research. By bringing a number community sites together under a single cooperative effort, we intend to lower the friction to doing so, as well as better enable the sites themselves to coordinate with one another on supporting researchers.</p>
-        <p>At present, DERP focuses on provides data to academic researchers and facilitates an active online research community of Fellows. We intend to host a symposium with our affiliated researchers in 2015.</p>
-      </div>
-    </section>
-    <section id="collaborate">
-      <div class="inner">
-        <h3>collaborate</h3>
-        <div class="collaborate-box">
-          <strong>I am a...</strong>
-          <div class="choices">
-            <label class="researcher">
-              researcher
-              <input type="radio" name="iama">
-              <div class="details">
-                Welcome! Please say hello to:
-                <a href="mailto:join@derp.institute" target="_blank">join@derp.institute</a>
-                for a welcome into our community.
-                <label><input type="radio" name="iama">back</label>
-              </div>
-            </label>
-            <label class="community">
-              community builder
-              <input type="radio" name="iama">
-              <div class="details">
-                Terrific! Please get in touch with:
-                <a href="mailto:org@derp.institute" target="_blank">partner@derp.institute</a>
-                We'll send you details on getting involved.
-                <label><input type="radio" name="iama">back</label>
-              </div>
-            </label>
+<%inherit file="page.html"/>
+
+<header>
+  <img class="logo" src="static/logo.png" alt="">
+  <div class="title-line">
+    <h1>Digital Ecologies Research Partnership</h1>
+    <aside>(est. 2014)</aside>
+  </div>
+</header>
+<section id="brief">
+  <h2>DERP is an alliance of organizations working together to<br>&#32;support academic exploration of communities online.</h2>
+</section>
+<section id="about">
+  <div class="inner">
+    <h3>about</h3>
+    <p>Launched in 2014, the Digital Ecologies Research Partnership (DERP), is a joint initiative by an alliance of community websites to promote academic inquiry into the vibrant social dynamics of the web.</p>
+    <p>DERP seeks to solve two problems in the academic research space:</p>
+    <p>First, it is difficult for academic researchers to easily obtain data for their work beyond the confines of the largest social media platforms. DERP is a single point of contact for researchers to get in touch with relevant team members across a range of different community sites. We envision that this will lower the friction to investigating these sites in more depth, and broaden the scope of research happening within the academic community.</p>
+    <p>Second, it remains difficult to conduct good cross-platform analyses in academic research. By bringing a number community sites together under a single cooperative effort, we intend to lower the friction to doing so, as well as better enable the sites themselves to coordinate with one another on supporting researchers.</p>
+    <p>At present, DERP focuses on provides data to academic researchers and facilitates an active online research community of Fellows. We intend to host a symposium with our affiliated researchers in 2015.</p>
+  </div>
+</section>
+<section id="collaborate">
+  <div class="inner">
+    <h3>collaborate</h3>
+    <div class="collaborate-box">
+      <strong>I am a...</strong>
+      <div class="choices">
+        <label class="researcher">
+          researcher
+          <input type="radio" name="iama">
+          <div class="details">
+            Welcome! Please say hello to:
+            <a href="mailto:join@derp.institute" target="_blank">join@derp.institute</a>
+            for a welcome into our community.
+            <label><input type="radio" name="iama">back</label>
           </div>
-        </div>
+        </label>
+        <label class="community">
+          community builder
+          <input type="radio" name="iama">
+          <div class="details">
+            Terrific! Please get in touch with:
+            <a href="mailto:org@derp.institute" target="_blank">partner@derp.institute</a>
+            We'll send you details on getting involved.
+            <label><input type="radio" name="iama">back</label>
+          </div>
+        </label>
       </div>
-    </section>
-    <footer>
-      <div class="inner">
-        &copy; DERP 2014
-        <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">
-          <img class="cc-emblems" src="static/cc-emblems.png" alt="Creative Commons Attribution-ShareAlike 4.0 International License">
-        </a>
-      </div>
-    </footer>
-  </body>
-</html>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="inner">
+    &copy; DERP 2014
+    <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">
+      <img class="cc-emblems" src="static/cc-emblems.png" alt="Creative Commons Attribution-ShareAlike 4.0 International License">
+    </a>
+  </div>
+</footer>
