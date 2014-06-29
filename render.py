@@ -17,6 +17,7 @@ def main():
    template = Template(filename=template_path)
    html = template.render(data=data)
    # minify html inter-tag whitespace
+   html = sub(r"\s+", " ", html)
    html = sub(r">\s*(.*?)\s*<", ">\g<1><", html)
    print html
 
