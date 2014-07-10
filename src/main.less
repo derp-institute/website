@@ -274,7 +274,6 @@ section, footer {
 
   .collaborate-box {
     position: relative;
-    height: 8em;
     margin-top: 6px;
     border: 3px solid @green;
 
@@ -295,30 +294,33 @@ section, footer {
     font-family: @slab;
     font-size: .9em;
     color: #777;
-    margin: .66em 1em;
-    margin-bottom: 1.33em;
+    margin: 1em;
   }
 
   .choices {
     text-align: center;
 
     & > label {
-      @spacing: 2em;
       @side-padding: 1em;
 
       .green-button;
-      display: inline-block;
+      display: block;
       border: none;
       padding: 10px @side-padding;
-      margin: 0;
-      margin-left: @spacing / 2;
-      margin-right: @spacing / 2;
+      margin: 1em;
 
       font-family: @slab;
-      font-size: 1em;
+      font-size: 1.2em;
 
       &:focus {
         outline: none;
+      }
+
+      .tagline {
+        display: block;
+        font-size: .65em;
+        font-family: sans-serif;
+        color: rgba(255, 255, 255, .8);
       }
 
       .details {
@@ -362,7 +364,7 @@ section, footer {
           top: @inner-pad + 1;
           bottom: @inner-pad + 1;
           height: auto;
-          padding: 1em 0;
+          padding: 2.25em 0;
           opacity: 1;
         }
       }
