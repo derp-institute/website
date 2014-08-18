@@ -21,7 +21,7 @@
 </section>
 <ul id="community-logos">
 % for community in data["communities"]:
-  <li><img src="static/communities/${community['name'].lower()}.png" alt=""></li>
+  <li class="${community['name'].lower()}"><img src="static/communities/${community['name'].lower()}.png" alt=""></li>
 % endfor
 </ul>
 <section id="about">
