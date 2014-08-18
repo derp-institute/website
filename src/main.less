@@ -108,6 +108,7 @@ header {
     border-bottom: 2px solid @green;
     text-shadow: 0 0 20px white;
     text-rendering: optimizeLegibility;
+    white-space: nowrap;
   }
 
   aside {
@@ -533,6 +534,10 @@ footer {
 @media (max-width: 500px) {
   header {
     font-size: 16px;
+
+    h1 {
+      white-space: normal;
+    }
   }
 
   nav, #graphic {
