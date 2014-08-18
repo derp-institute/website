@@ -51,7 +51,7 @@ header {
   text-align: center;
   background:
     url('treepattern.png') repeat-x center bottom / 240px 96px,
-    linear-gradient(to bottom, lighten(cyan, 47%), white 66%);
+    linear-gradient(to bottom, lighten(cyan, 47%), white 66%) no-repeat;
   padding-top: 70px;
 
   .title-line {
@@ -102,8 +102,8 @@ nav {
     display: inline-block;
     margin: 0 auto;
 
-    @logo-width: 124px;
-    @title-width: 740px;
+    @logo-width: 114px;
+    @title-width: 730px;
     width: @title-width - @logo-width;
     padding-left: @logo-width;
 
@@ -177,7 +177,7 @@ section, footer {
   text-align: center;
 
   h2 {
-    max-width: 650px;
+    max-width: 680px;
     margin: 0 auto;
     font-size: 22px;
     font-weight: 500;
@@ -185,15 +185,25 @@ section, footer {
   }
 }
 
+#graphic {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  margin: 12px auto;
+  margin-top: 40px;
+}
+
 #about {
   .community-logos {
+    padding: 0;
+
     li {
       display: inline-block;
       list-style-type: none;
       margin: 5px 10px;
 
       img {
-        height: 40px;
+        height: 29px;
       }
     }
   }
@@ -214,7 +224,7 @@ section, footer {
     list-style-type: none;
     margin: @spacing / 2;
 
-    @width: @content-width / 4 - @spacing;
+    @width: @content-width / 3 - @spacing;
     width: @width;
 
     img {
@@ -245,24 +255,29 @@ section, footer {
 }
 
 #communities {
-  .community-bio {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
     display: inline-block;
-    font-family: @slab;
-
-    @spacing: 10px;
-    @width: @content-width / 3 - @spacing;
-    width: @width;
     vertical-align: top;
+    margin: 15px;
 
-    a {
-      color: #555;
+    p {
+      font-size: .9em;
     }
+  }
 
-    img {
-      display: block;
-      height: 40px;
-      margin-bottom: 10px;
-    }
+  a {
+    color: #555;
+  }
+
+  img {
+    display: block;
+    height: 50px;
+    margin-bottom: 10px;
   }
 }
 
@@ -378,11 +393,22 @@ footer {
   font-size: 11px;
   line-height: 18px;
 
+  span {
+    margin-left: 6px;
+  }
+
+  a {
+    color: @green;
+  }
+
+  .contact {
+    margin-right: 6px;
+  }
+
   a[rel='license'] {
     display: inline-block;
     height: 18px;
     vertical-align: middle;
-    margin-left: 6px;
   }
 
   .cc-emblems {
@@ -421,6 +447,21 @@ footer {
     }
   }
 
+  nav {
+    ul {
+      padding-left: 0;
+      width: 100%;
+    }
+
+    li {
+      margin: 0 12px;
+
+      a {
+        padding: 8px;
+      }
+    }
+  }
+
   #brief {
     h2 {
       font-size: 18px;
@@ -428,6 +469,31 @@ footer {
 
     br {
       display: none;
+    }
+  }
+
+  #about .community-logos li {
+    margin: 5px;
+
+    img {
+      height: 3.75vw;
+      min-height: 19px;
+    }
+  }
+
+  #fellows {
+    li {
+      width: 31.333%;
+      margin: 1%;
+    }
+
+    li img {
+      width: 100%;
+      height: auto;
+    }
+
+    .details .name, .details .from {
+      white-space: nowrap;
     }
   }
 
@@ -441,8 +507,22 @@ footer {
     font-size: 16px;
   }
 
+  nav, #graphic {
+    display: none;
+  }
+
   #brief h2 {
     font-size: 16px;
+  }
+
+  #fellows {
+    .details .from {
+      display: none;
+    }
+
+    .details .name {
+      font-size: 11px;
+    }
   }
 
   #collaborate {

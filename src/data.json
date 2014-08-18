@@ -1,1 +1,116 @@
-{}
+{
+    "communities": [
+         {
+            "name": "Imgur",
+            "description": "Imgur is a community that consumes, creates, and shares tomorrow's viral content, today. Every day, the Imgur community votes, comments, and distills more than 1.5 million images down to a curated, continuously updating stream of the best visual content the web has to offer.",
+            "url": "http://imgur.com"
+         },
+         {
+            "name": "reddit",
+            "description": "reddit is an online community where users can submit, vote, and comment on content, stories, and discussions. The hottest stories as determined by the community through interaction rise to the top of the site, while cooler stories sink. reddit is open source, and community members are constantly tinkering and contributing features and translations back to the site. reddit also features the world's largest gift exchange and the redditgifts marketplace through redditgifts.com as well as video and original programming through reddit.tv.",
+            "url": "http://www.reddit.com"
+         },
+         {
+            "name": "Fark",
+            "description": "Fark is a community dedicated to presenting news in a way that's both informative and entertaining. Featuring user-submitted news stories and with funny, sarcastic taglines, Fark appears very much like if the Daily Show ran the Drudge Report, but with irreverent discussion in real time.",
+            "url": "http://fark.com"
+         },
+         {
+            "name": "StackExchange",
+            "description": "StackExchange is a network of 125 communities that are created and run by experts and enthusiasts who are passionate about a specific topic. The platform builds libraries of high-quality questions and answers, focused on each community's area of expertise.",
+            "url": "http://stackoverflow.com"
+         },
+         {
+            "name": "Twitch",
+            "description": "Twitch is the world's leading video platform and community for gamers with more than 45 million visitors per month.",
+            "url": "http://twitch.tv"
+         }
+    ],
+    "fellows": [
+         {
+            "name": "Alex Leavitt",
+            "from": "USC Annenberg",
+            "url": "http://alexleavitt.com"
+         },
+         {
+            "name": "Tim Althoff",
+            "from": "Stanford University",
+            "url": "http://timalthoff.de"
+         },
+         {
+            "name": "Eric Gilbert",
+            "from": "Georgia Tech",
+            "url": "http://eegilbert.org"
+         },
+         {
+            "name": "Chris Peterson",
+            "from": "MIT",
+            "url": "http://www.cpeterson.org"
+         },
+         {
+            "name": "Whitney Phillips",
+            "from": "Humboldt State University",
+            "url": "http://billions-and-billions.com"
+         },
+         {
+            "name": "Erhardt Graeff",
+            "from": "MIT Media Lab",
+            "url": "http://erhardtgraeff.com"
+         },
+         {
+            "name": "Sara Watson",
+            "from": "Harvard University",
+            "url": "http://www.saramwatson.com"
+         },
+         {
+            "name": "Molly Sauter",
+            "from": "McGill University",
+            "url": "http://oddletters.com"
+         },
+         {
+            "name": "An Xiao Mina",
+            "from": "The Civic Beat",
+            "url": "http://anxiaostudio.com"
+         },
+         {
+            "name": "Jason Li",
+            "from": "The Civic Beat",
+            "url": "http://www.hongkonggong.com"
+         },
+         {
+            "name": "Alice Daer",
+            "from": "Arizona State University",
+            "url": "http://alicedaer.com"
+         },
+         {
+            "name": "Kate Miltner",
+            "from": "USC Annenberg",
+            "url": "http://katemiltner.com"
+         },
+         {
+            "name": "Nate Matias",
+            "from": "MIT Media Lab",
+            "url": "http://natematias.com"
+         },
+         {
+            "name": "R. Stuart Geiger",
+            "from": "UC Berkeley",
+            "url": "http://stuartgeiger.com/"
+         },
+         {
+            "name": "Devin Gaffney",
+            "from": "Northeastern University",
+            "url": "http://www.devingaffney.com"
+         },
+         {
+            "name": "Ryan M. Milner",
+            "from": "College of Charleston",
+            "url": "http://rmmilner.com"
+         },
+         {
+            "name": "Augustin Chaintreau",
+            "from": "Columbia University",
+            "url": "www.cs.columbia.edu/~augustin"
+         }
+    ]
+}

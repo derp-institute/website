@@ -7,17 +7,66 @@
     <aside>(est. 2014)</aside>
   </div>
 </header>
+<nav>
+  <ul>
+    <li><a href="#about">about</a></li>
+    <li><a href="#fellows">fellows</a></li>
+    <li><a href="#communities">communities</a></li>
+    <li class="collaborate"><a href="#collaborate">collaborate</a></li>
+  </ul>
+</nav>
+<img id="graphic" src="static/top-graphic.png" alt="">
 <section id="brief">
-  <h2>DERP is an alliance of organizations working together to<br>&#32;support academic exploration of communities online.</h2>
+  <h2>DERP is an alliance of platforms supporting the academic exploration of communities online for the betterment of the internet at large.</h2>
 </section>
 <section id="about">
   <div class="inner">
     <h3>about</h3>
-    <p>Launched in 2014, the Digital Ecologies Research Partnership (DERP), is a joint initiative by an alliance of community websites to promote academic inquiry into the vibrant social dynamics of the web.</p>
+    <ul class="community-logos">
+    % for community in data["communities"]:
+      <li><img src="static/communities/${community['name'].lower()}.png" alt=""></li>
+    % endfor
+    </ul>
+    <p>Launched in 2014, the Digital Ecologies Research Partnership (DERP) is a joint initiative by an alliance of community websites to promote open, publicly accessible, and ethical academic inquiry into the vibrant social dynamics of the web.</p>
     <p>DERP seeks to solve two problems in the academic research space:</p>
     <p>First, it is difficult for academic researchers to easily obtain data for their work beyond the confines of the largest social media platforms. DERP is a single point of contact for researchers to get in touch with relevant team members across a range of different community sites. We envision that this will lower the friction to investigating these sites in more depth, and broaden the scope of research happening within the academic community.</p>
-    <p>Second, it remains difficult to conduct good cross-platform analyses in academic research. By bringing a number community sites together under a single cooperative effort, we intend to lower the friction to doing so, as well as better enable the sites themselves to coordinate with one another on supporting researchers.</p>
-    <p>At present, DERP focuses on provides data to academic researchers and facilitates an active online research community of Fellows. We intend to host a symposium with our affiliated researchers in 2015.</p>
+    <p>Second, it remains difficult to conduct good cross-platform analyses in academic research. By bringing a number community of sites together under a single cooperative effort, we intend to lower the friction of doing so, as well as better enable the sites themselves to coordinate with one another on supporting researchers.</p>
+    <p>DERP focuses on providing public data to academic researchers while facilitating an active online research community of Fellows. DERP will only support research that respects user privacy, responsibly uses data, and meets IRB approval. All research supported by DERP will be released openly and made publicly available. Partner platforms may also have additional guidelines and privacy commitments that apply to the research they support.</p>
+  </div>
+</section>
+<section id="fellows">
+  <div class="inner">
+    <h3>fellows</h3>
+    <p>DERP Fellows are a community of affiliate researchers that currently are using DERP data, and also provide assistance to the Partnership on its continuing operations as an advisory committee.</p>
+    <ul>
+    % for fellow in sorted(data["fellows"], key=lambda f: f['name'].split()[-1]):
+      <li>
+        <a href="${fellow['url']}" target="_blank">
+          <img src="static/fellows/${fellow['name'].lower().replace(' ', '-').replace('.', '')}.jpg" alt="">
+          <div class="details">
+            <span class="name">${fellow['name']}</span>
+            <span class="from">${fellow['from']}</span>
+          </div>
+        </a>
+      </li>
+    % endfor
+    </ul>
+  </div>
+</section>
+<section id="communities">
+  <div class="inner">
+    <h3>communities</h3>
+    <p>As of ${data_timestamp.strftime('%B %Y')}, DERP has ${len(data["communities"])} partner organizations that collaborate in providing data and supporting academic researchers:</p>
+    <ul>
+    % for community in data["communities"]:
+      <li class="community-bio">
+        <a href="${community['url']}" target="_blank">
+          <img src="static/communities/${community['name'].lower()}.png" alt="${community['name']}">
+        </a>
+        <p>${community['description']}</p>
+      </li>
+    % endfor
+    </ul>
   </div>
 </section>
 <section id="collaborate">
@@ -32,7 +81,7 @@
           <input type="radio" name="iama">
           <div class="details">
             Welcome! Please say hello to:
-            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#105;&#110;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;" target="_blank">join@derp.institute</a>
+            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#114;&#111;&#112;&#111;&#115;&#97;&#108;&#115;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;" target="_blank">&#112;&#114;&#111;&#112;&#111;&#115;&#97;&#108;&#115;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;</a>
             for an invitation into our community.
             <label><input type="radio" name="iama">back</label>
           </div>
@@ -43,7 +92,7 @@
           <input type="radio" name="iama">
           <div class="details">
             Terrific! Please get in touch with:
-            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#114;&#103;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;" target="_blank">partner@derp.institute</a>
+            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#114;&#103;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;" target="_blank">&#111;&#114;&#103;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;</a>
             We'll send you details on getting involved.
             <label><input type="radio" name="iama">back</label>
           </div>
@@ -54,9 +103,12 @@
 </section>
 <footer>
   <div class="inner">
-    &copy; DERP 2014
-    <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">
-      <img class="cc-emblems" src="static/cc-emblems.png" alt="Creative Commons Attribution-ShareAlike 4.0 International License">
-    </a>
+    <span class="contact"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#100;&#101;&#114;&#112;&#46;&#105;&#110;&#115;&#116;&#105;&#116;&#117;&#116;&#101;">contact</a></span>
+    <span>&copy; DERP 2014</span>
+    <span>
+      <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img class="cc-emblems" src="static/cc-emblems.png" alt="Creative Commons Attribution-ShareAlike 4.0 International License">
+      </a>
+    </span>
   </div>
 </footer>
