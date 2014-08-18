@@ -19,14 +19,14 @@
 <section id="brief">
   <h2>DERP is an alliance of platforms supporting the academic exploration of communities online for the betterment of the internet at large.</h2>
 </section>
+<ul id="community-logos">
+% for community in data["communities"]:
+  <li><img src="static/communities/${community['name'].lower()}.png" alt=""></li>
+% endfor
+</ul>
 <section id="about">
   <div class="inner">
     <h3>about</h3>
-    <ul class="community-logos">
-    % for community in data["communities"]:
-      <li><img src="static/communities/${community['name'].lower()}.png" alt=""></li>
-    % endfor
-    </ul>
     <p>Launched in 2014, the Digital Ecologies Research Partnership (DERP) is a joint initiative by an alliance of community websites to promote open, publicly accessible, and ethical academic inquiry into the vibrant social dynamics of the web.</p>
     <p>DERP seeks to solve two problems in the academic research space:</p>
     <p>First, it is difficult for academic researchers to easily obtain data for their work beyond the confines of the largest social media platforms. DERP is a single point of contact for researchers to get in touch with relevant team members across a range of different community sites. We envision that this will lower the friction to investigating these sites in more depth, and broaden the scope of research happening within the academic community.</p>
