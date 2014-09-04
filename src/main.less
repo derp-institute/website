@@ -3,6 +3,7 @@
 @lightgreen: #e2eee0;
 @bggreen: #fafcf9;
 @content-width: 700px;
+@list-spacing: 15px;
 
 .green-button {
   color: white;
@@ -292,7 +293,7 @@ section, footer {
   li {
     display: inline-block;
     vertical-align: top;
-    margin: 15px;
+    margin: @list-spacing;
 
     p {
       font-size: .9em;
@@ -333,12 +334,49 @@ section, footer {
     }
   }
 
-  strong {
-    display: block;
+  h4 {
     font-family: @slab;
-    font-size: .9em;
-    color: #777;
-    margin: 1em;
+    color: rgba(0, 0, 0, .5);
+  }
+
+  .proposal-guidelines {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: @list-spacing;
+      margin-bottom: 2em;
+      min-height: 3em;
+      padding-left: 4em;
+    }
+
+    .number {
+      display: block;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      margin-left: -2.65em;
+      text-align: center;
+      font-family: @slab;
+      font-size: 1.5em;
+      color: white;
+      background: #aaa;
+      border-radius: 100%;
+      float: left;
+    }
+
+    strong {
+      font-family: @slab;
+      font-size: 1.25em;
+      color: #555;
+    }
+
+    p {
+      margin: 0;
+      margin-top: .25em;
+      font-size: .9em;
+    }
   }
 
   .choices {
@@ -566,6 +604,18 @@ footer {
   }
 
   #collaborate {
+    .proposal-guidelines {
+      li {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+      }
+
+      .number {
+        display: none;
+      }
+    }
+
     .collaborate-box {
       font-size: 14px;
     }
