@@ -111,6 +111,11 @@
             "name": "Augustin Chaintreau",
             "from": "Columbia University",
             "url": "http://www.cs.columbia.edu/~augustin"
+         },
+         {
+            "name": "Jon Manning",
+            "from": "University of Tasmania",
+            "url": ""
          }
     ]
 }
