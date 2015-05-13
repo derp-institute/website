@@ -24,6 +24,11 @@
             "name": "Twitch",
             "description": "Twitch is the world's leading video platform and community for gamers with more than 45 million visitors per month.",
             "url": "http://twitch.tv"
+         },
+         {
+            "name": "deviantART",
+            "description": "deviantART is the largest online social network for artists and art enthusiasts with over 33 million registered members, attracting 65 million unique visitors per month. As a community destination, deviantART is a platform that allows emerging and established artists to exhibit, promote, and share their works within a peer community dedicated to the arts.",
+            "url": "http://deviantart.com"
          }
     ],
     "fellows": [
